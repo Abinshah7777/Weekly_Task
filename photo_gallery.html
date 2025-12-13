@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        /* Grid layout */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Wrapper for each image */
+        .photo {
+            overflow: hidden; /* clip image inside wrapper */
+            border-radius: 8px;
+        }
+
+        /* Image itself */
+        .photo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease; /* smooth zoom */
+            display: block;
+        }
+
+        /* Hover Zoom */
+        .photo:hover img {
+            transform: scale(1.5); /* big zoom */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Photo Gallery</h1>
+
+    <div class="gallery">
+        <div class="photo"><img src="https://picsum.photos/400/300?random=1" alt="Photo 1"></div>
+        <div class="photo"><img src="https://picsum.photos/400/300?random=2" alt="Photo 2"></div>
+        <div class="photo"><img src="https://picsum.photos/400/300?random=3" alt="Photo 3"></div>
+        <div class="photo"><img src="https://picsum.photos/400/300?random=4" alt="Photo 4"></div>
+        <div class="photo"><img src="https://picsum.photos/400/300?random=5" alt="Photo 5"></div>
+        <div class="photo"><img src="https://picsum.photos/400/300?random=6" alt="Photo 6"></div>
+    </div>
+
+</body>
+</html>

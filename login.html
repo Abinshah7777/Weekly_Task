@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body style="margin:0;">
+
+    <header style="
+        background:lightgreen;
+        padding:20px;
+        font-size:24px;
+        text-align:center;
+    ">
+        Mentor Engineering College
+    </header>
+
+    <div style="display:flex; justify-content:center; align-items:center; height:80vh;">
+        <form onsubmit="return goToMain(event)" style="
+            display:grid; 
+            gap:10px; 
+            padding:25px; 
+            background:#eee; 
+            width:260px;
+        ">
+
+            <h3 style="margin:0; text-align:center;">Login</h3>
+
+            <!-- Username -->
+            <input type="text" placeholder="Username" style="padding:10px;" required>
+
+            <!-- Country Code + Phone -->
+            <div style="display:flex;">
+                <select style="
+                    padding:10px; 
+                    border:1px solid #ccc; 
+                    border-right:none;
+                ">
+                    <option value="+91" selected>+91</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                    <option value="+971">+971</option>
+                    <option value="+61">+61</option>
+                    <option value="+81">+81</option>
+                </select>
+
+                <input type="tel" 
+                       placeholder="Phone Number" 
+                       style="padding:10px; flex:1; border:1px solid #ccc;"
+                       pattern="[0-9]{7,12}" 
+                       required>
+            </div>
+
+            <!-- Password with Regex -->
+            <input type="password"
+                   id="password"
+                   placeholder="Password"
+                   style="padding:10px;"
+                   required
+                   pattern="(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{5,}"
+                   title="Minimum 5 characters, at least 1 uppercase and 1 special character">
+
+            <!-- REAL submit button -->
+            <button type="submit"
+                    style="
+                        padding:10px; 
+                        background:lightgreen; 
+                        border:none; 
+                        cursor:pointer;
+                    ">
+                Login
+            </button>
+
+        </form>
+    </div>
+
+    <script>
+        function goToMain(event) {
+            // If form is invalid, browser automatically blocks it.
+            // If valid, this function will run.
+            window.location.href = "main.html";
+            return false;
+        }
+    </script>
+
+</body>
+</html>

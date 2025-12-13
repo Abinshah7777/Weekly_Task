@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even/Odd Checker</title>
+    <style>
+        body { font-family: Arial; padding: 30px; background: #f0f0f0; }
+        input, button { padding: 8px; margin: 5px; }
+        .result { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Even/Odd Checker</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkEvenOdd()">Check</button>
+    <div class="result" id="evenOddResult"></div>
+
+    <script>
+        function checkEvenOdd() {
+            var number = Number(document.getElementById('numberInput').value);
+            var resultElement = document.getElementById('evenOddResult');
+
+            if (isNaN(number)) {
+                resultElement.textContent = 'Please enter a valid number!';
+            } else if (number % 2 === 0) {
+                resultElement.textContent = number + ' is EVEN';
+            } else {
+                resultElement.textContent = number + ' is ODD';
+            }
+        }
+    </script>
+
+</body>
+</html>
