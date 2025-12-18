@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odd / Even Checker</title>
+
+<link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+<header>
+    <h1>Even / Odd Checker</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Odd / Even Checker</h2>
+
+        <input type="number" id="num" placeholder="Enter a number"><br><br>
+
+        <button onclick="check()">Check</button>
+
+        <div id="result"></div>
+    </div>
+</div>
+
+<script>
+    function check() {
+        const n = document.getElementById("num").value;
+        const res = document.getElementById("result");
+
+        if (n === "") {
+            res.textContent = "Please enter a number";
+            return;
+        }
+
+        res.textContent = (n % 2 === 0) ? "Even Number" : "Odd Number";
+    }
+</script>
+
+</body>
+</html>
