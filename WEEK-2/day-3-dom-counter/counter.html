@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter App</title>
+</head>
+
+<body>
+
+<h2>Counter</h2>
+
+<h1 id="count">0</h1>
+
+<button id="inc">Increment</button>
+<button id="dec">Decrement</button>
+<button id="reset">Reset</button>
+
+<script>
+let count = 0;
+
+const countEl = document.getElementById("count");
+const incBtn = document.querySelector("#inc");
+const decBtn = document.querySelector("#dec");
+const resetBtn = document.querySelector("#reset");
+
+incBtn.addEventListener("click", () => {
+  count++;
+  countEl.innerText = count;
+});
+
+decBtn.addEventListener("click", () => {
+  count--;
+  countEl.innerText = count;
+});
+
+resetBtn.addEventListener("click", () => {
+  count = 0;
+  countEl.innerText = count;
+});
+</script>
+
+</body>
+</html>
+    

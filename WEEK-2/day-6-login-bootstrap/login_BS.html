@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form - Bootstrap UI</title>
+
+  <!-- Bootstrap CDN -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+
+      <div class="card shadow p-4">
+
+        <h3 class="text-center mb-3">Login</h3>
+
+        <form id="loginForm">
+
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input id="username" type="text" class="form-control">
+            <small id="userError" class="text-danger"></small>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input id="password" type="password" class="form-control">
+            <small id="passError" class="text-danger"></small>
+          </div>
+
+          <button class="btn btn-primary w-100">Login</button>
+
+          <p id="successMsg" class="text-success mt-2"></p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("loginForm");
+
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+
+const userError = document.getElementById("userError");
+const passError = document.getElementById("passError");
+const successMsg = document.getElementById("successMsg");
+
+form.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  userError.innerText = "";
+  passError.innerText = "";
+  successMsg.innerText = "";
+
+  let valid = true;
+
+  if (username.value.trim() === "") {
+    userError.innerText = "Username is required";
+    valid = false;
+  }
+
+  if (password.value.trim() === "") {
+    passError.innerText = "Password is required";
+    valid = false;
+  }
+
+  if (valid) {
+    successMsg.innerText = "Login Successful 🎉";
+  }
+});
+</script>
+
+</body>
+</html>

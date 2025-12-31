@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks List</title>
+</head>
+<body>
+
+    <h2>Student Marks</h2>
+    <ul id="marksList"></ul>
+
+
+    <script>
+        let students = [
+            { name: "Abinshah", marks: 85 },
+            { name: "Rahman", marks: 78 },
+            { name: "Ninav", marks: 92 }
+        ];
+
+        let list = document.getElementById("marksList");
+
+        students.map(function(student) {
+            let li = document.createElement("li");
+            li.textContent = student.name + " : " + student.marks;
+            list.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
