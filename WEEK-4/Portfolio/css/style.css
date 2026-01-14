@@ -1,0 +1,271 @@
+/* =====================
+   CSS VARIABLES
+===================== */
+:root {
+  --primary: #0d6efd;
+  --dark: #0b1220;
+  --light: #f8fafc;
+  --muted: #64748b;
+  --card-bg: #ffffff;
+  --shadow-sm: 0 10px 25px rgba(0,0,0,0.06);
+  --shadow-lg: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 72px;
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   NAVBAR (SUBTLE ANIMATION)
+===================== */
+.navbar {
+  backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  position: relative;
+  margin-left: 18px;
+  color: #e5e7eb !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: var(--primary);
+  transition: width 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* =====================
+   HERO SECTION (ANIMATED)
+===================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(
+    circle at top left,
+    #1e293b,
+    #020617
+  );
+  color: white;
+  animation: fadeInHero 1.2s ease forwards;
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+
+.hero span {
+  color: var(--primary);
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 1.1rem;
+  color: #cbd5f5;
+  animation: fadeInText 1.6s ease forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =====================
+   SECTIONS (FADE-IN)
+===================== */
+.section {
+  padding: 100px 0;
+  animation: sectionFade 0.8s ease both;
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section h2 {
+  font-weight: 600;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+}
+
+/* =====================
+   EDUCATION / LISTS
+===================== */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =====================
+   SKILLS (HOVER LIFT)
+===================== */
+.skill {
+  background: var(--card-bg);
+  padding: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+  border-radius: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.skill:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =====================
+   PROJECT CARDS (PRO)
+===================== */
+.project {
+  background: var(--card-bg);
+  padding: 28px;
+  height: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.project h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.project a:hover {
+  transform: translateX(6px);
+}
+
+.project:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =====================
+   CONTACT
+===================== */
+#contact a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+#contact a:hover {
+  opacity: 0.7;
+}
+
+/* =====================
+   BACKGROUND VARIANT
+===================== */
+.bg-light {
+  background: linear-gradient(
+    180deg,
+    #f8fafc,
+    #eef2ff
+  ) !important;
+}
+
+/* =====================
+   RESPONSIVE POLISH
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
