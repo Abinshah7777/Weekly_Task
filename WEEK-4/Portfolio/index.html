@@ -2,201 +2,503 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Abinshah P M | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abinshah P M | Full-Stack Developer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "service_7ooqqfj",
-      });
-   })();
-</script>
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Abinshah</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HOME ================= -->
-<section id="home" class="hero">
-  <div class="container text-center">
-    <h1>Hi, I'm <span>Abinshah P M</span></h1>
-    <p>Aspiring Programmer • Backend & Web Development</p>
-  </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section container">
-  <h2>About Me</h2>
-  <p>
-    I am a motivated and detail-oriented aspiring programmer with strong academic
-    performance and hands-on experience in Python, C, and web technologies.
-    I have built a full-stack Catalogue Management System using Flask and JavaScript,
-    along with multiple mini projects.
-  </p>
-  <p>
-    I am particularly interested in backend development, APIs, and logical problem
-    solving. This portfolio was built as part of a JavaScript revision week to prepare
-    for React.
-  </p>
-</section>
-
-<!-- ================= EDUCATION ================= -->
-<section id="education" class="section bg-light">
-  <div class="container">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Higher Secondary Certificate (12th)</strong><br>
-        SNV SKT HSS, N. Paravur (2022 – 2024)<br>
-        Marks: 94%
-      </li>
-      <li>
-        <strong>Secondary School Certificate (10th)</strong><br>
-        Al-Ameen Public School, Edappally (2021 – 2022)<br>
-        Marks: 86%
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= INTERNSHIPS & CERTIFICATIONS ================= -->
-<section id="internships" class="section container">
-  <h2>Internships & Certifications</h2>
-  <ul>
-    <li>
-      <strong>Internship Trainee – Litmus7</strong><br>
-      Gained hands-on experience in software development and professional workflows.
-    </li>
-    <li>
-      <strong>IT Workshop Certification</strong><br>
-      Introduction to 5G and IoT – IICT GMBH
-    </li>
-  </ul>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section bg-light">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <h5>Programming Languages</h5>
-    <div class="row mb-3">
-      <div class="col-md-3 skill">Python</div>
-      <div class="col-md-3 skill">C</div>
-    </div>
-
-    <h5>Web Technologies</h5>
-    <div class="row mb-3">
-      <div class="col-md-3 skill">HTML</div>
-      <div class="col-md-3 skill">CSS</div>
-      <div class="col-md-3 skill">JavaScript</div>
-      <div class="col-md-3 skill">Flask</div>
-    </div>
-
-    <h5>Soft Skills</h5>
-    <div class="row">
-      <div class="col-md-3 skill">Leadership</div>
-      <div class="col-md-3 skill">Collaboration</div>
-      <div class="col-md-3 skill">Critical Thinking</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section container">
-  <h2>Services</h2>
-  <div class="row g-4">
-    <div class="col-md-4 project">Frontend Web Development</div>
-    <div class="col-md-4 project">Backend Development with Flask</div>
-    <div class="col-md-4 project">Responsive Website Design</div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section bg-light">
-  <div class="container">
-    <h2>Works / Projects</h2>
-
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="project">
-          <h5>Catalogue Management System</h5>
-          <p>Full-stack CRUD application using Flask and JavaScript.</p>
-          <a href="https://github.com/Abinshah7777" target="_blank">GitHub</a>
-        </div>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">A</span>
+        <span class="logo-text">Abinshah</span>
+      </a>
+      
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#cv" class="nav-link">CV</a>
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
       </div>
-
-      <div class="col-md-4">
-        <div class="project">
-          <h5>Weather App</h5>
-          <p>Fetch API based app displaying real-time weather data.</p>
-          <a href="https://github.com/Abinshah7777" target="_blank">GitHub</a>
-        </div>
+      
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </div>
+  </nav>
 
-      <div class="col-md-4">
-        <div class="project">
-          <h5>To-Do App</h5>
-          <p>Task management application using JavaScript.</p>
-          <a href="https://github.com/Abinshah7777" target="_blank">GitHub</a>
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-label">Hello, I'm</div>
+        <h1 class="hero-title">
+          <span class="title-line">Abinshah P M</span>
+        </h1>
+        <p class="hero-subtitle">
+          Full-Stack Developer specializing in Backend Development & Modern Web Technologies
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">94%</div>
+            <div class="stat-label">Academic Score</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">5+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">2+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-secondary">View Work</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    
+    <div class="scroll-indicator">
+      <span></span>
+      <span></span>
+    </div>
+  </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section container">
-  <h2>Contact Us</h2>
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Introduction</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="lead-text">
+            I'm a motivated and detail-oriented aspiring programmer with strong academic 
+            performance and hands-on experience in modern web technologies.
+          </p>
+          <p>
+            I've built a full-stack <strong>Catalogue Management System</strong> using Flask 
+            and JavaScript, along with multiple projects demonstrating proficiency in both 
+            frontend and backend development.
+          </p>
+          <p>
+            My passion lies in <strong>backend development</strong>, RESTful APIs, and solving 
+            complex logical problems. I'm constantly learning and exploring new technologies 
+            to build better, more efficient solutions.
+          </p>
+          
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">🎯</div>
+              <div>
+                <h4>Focus Areas</h4>
+                <p>Backend Development, APIs, Problem Solving</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">💡</div>
+              <div>
+                <h4>Current Goal</h4>
+                <p>Mastering React & Full-Stack Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <div class="image-placeholder">
+            <div class="code-snippet">
+              <div class="code-line"><span class="keyword">const</span> developer = {</div>
+              <div class="code-line">  name: <span class="string">"Abinshah"</span>,</div>
+              <div class="code-line">  role: <span class="string">"Full-Stack Dev"</span>,</div>
+              <div class="code-line">  passion: <span class="string">"Building Apps"</span></div>
+              <div class="code-line">};</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <form id="contactForm" class="col-md-6">
-    <input type="text" class="form-control mb-3" name="name" placeholder="Your Name" required>
-    <input type="email" class="form-control mb-3" name="email" placeholder="Your Email" required>
-    <textarea class="form-control mb-3" name="message" placeholder="Your Message" required></textarea>
-    <button class="btn btn-dark w-100">Send Message</button>
-  </form>
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Journey</span>
+        <h2 class="section-title">Education & Experience</h2>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>Internship Trainee</h3>
+            <h4>Litmus7</h4>
+            <p>Gained hands-on experience in software development, professional workflows, 
+               and collaborative team environments.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 - 2024</span>
+            <h3>Higher Secondary Certificate</h3>
+            <h4>SNV SKT HSS, N. Paravur</h4>
+            <p>Completed 12th grade with <strong>94% marks</strong>, demonstrating strong 
+               academic performance and dedication.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 - 2022</span>
+            <h3>Secondary School Certificate</h3>
+            <h4>Al-Ameen Public School, Edappally</h4>
+            <p>Completed 10th grade with <strong>86% marks</strong>.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>IT Workshop Certification</h3>
+            <h4>IICT GMBH</h4>
+            <p>Introduction to 5G and IoT technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p id="status" class="mt-2"></p>
-</section>
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="category-title">Programming</h3>
+          <div class="skill-items">
+            <div class="skill-chip">Python</div>
+            <div class="skill-chip">C</div>
+            <div class="skill-chip">JavaScript</div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="category-title">Web Development</h3>
+          <div class="skill-items">
+            <div class="skill-chip">HTML5</div>
+            <div class="skill-chip">CSS3</div>
+            <div class="skill-chip">JavaScript</div>
+            <div class="skill-chip">Flask</div>
+            <div class="skill-chip">Bootstrap</div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="category-title">Backend & APIs</h3>
+          <div class="skill-items">
+            <div class="skill-chip">Flask</div>
+            <div class="skill-chip">REST APIs</div>
+            <div class="skill-chip">Database Design</div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="category-title">Soft Skills</h3>
+          <div class="skill-items">
+            <div class="skill-chip">Leadership</div>
+            <div class="skill-chip">Collaboration</div>
+            <div class="skill-chip">Critical Thinking</div>
+            <div class="skill-chip">Problem Solving</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, accessible user interfaces with modern HTML, CSS, and JavaScript</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <p>Creating robust server-side applications and RESTful APIs using Flask and Python</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Crafting mobile-first, responsive websites that work seamlessly across all devices</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= SCRIPTS ================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="https://github.com/Abinshah7777" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Full-Stack</span>
+            </div>
+            <h3>Catalogue Management System</h3>
+            <p>A comprehensive full-stack CRUD application built with Flask backend and 
+               JavaScript frontend, featuring database integration and RESTful API design.</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="https://github.com/Abinshah7777" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">API</span>
+              <span class="tag">CSS</span>
+            </div>
+            <h3>Weather Application</h3>
+            <p>Real-time weather data application using Fetch API, displaying current 
+               conditions, forecasts, and weather metrics with a clean interface.</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="https://github.com/Abinshah7777" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <h3>Task Management App</h3>
+            <p>Intuitive to-do application with task creation, completion tracking, 
+               local storage persistence, and smooth user interactions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- ========== CV SECTION ========== -->
+  <section id="cv" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Resume</span>
+        <h2 class="section-title">Curriculum Vitae</h2>
+      </div>
+      
+      <div class="cv-container">
+        <div class="cv-preview">
+          <div class="cv-header">
+            <h2>Abinshah P M</h2>
+            <p>Full-Stack Developer</p>
+          </div>
+          
+          <div class="cv-section">
+            <h3>Professional Summary</h3>
+            <p>Aspiring full-stack developer with strong academic background (94% HSC) and 
+               hands-on experience in Python, Flask, and modern web technologies. Proven 
+               ability to build complete applications from concept to deployment.</p>
+          </div>
+          
+          <div class="cv-section">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li><strong>Languages:</strong> Python, C, JavaScript, HTML5, CSS3</li>
+              <li><strong>Frameworks:</strong> Flask, Bootstrap</li>
+              <li><strong>Specialties:</strong> Backend Development, REST APIs, CRUD Operations</li>
+            </ul>
+          </div>
+          
+          <div class="cv-section">
+            <h3>Key Projects</h3>
+            <ul>
+              <li><strong>Catalogue Management System:</strong> Full-stack application with Flask backend</li>
+              <li><strong>Weather App:</strong> API integration with real-time data fetching</li>
+              <li><strong>Task Manager:</strong> Interactive JavaScript application</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="cv-actions">
+          <a href="#" class="btn btn-primary btn-download" onclick="alert('CV download feature - connect to your actual CV file'); return false;">
+            <span class="download-icon">⬇</span>
+            Download CV (PDF)
+          </a>
+          <p class="cv-note">Professional resume with complete project details and achievements</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="js/script.js"></script>
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-description">
+          Have a project in mind or want to discuss opportunities? Drop me a message!
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>abinshah@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 XXXXX XXXXX</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Location</h4>
+                <p>Kanayannur, Kerala, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div>
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/Abinshah7777" target="_blank">@Abinshah7777</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                class="form-input" 
+                placeholder=" " 
+                required
+              >
+              <label for="name" class="form-label">Your Name</label>
+            </div>
+            
+            <div class="form-group">
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                class="form-input" 
+                placeholder=" " 
+                required
+              >
+              <label for="email" class="form-label">Your Email</label>
+            </div>
+            
+            <div class="form-group">
+              <textarea 
+                name="message" 
+                id="message" 
+                class="form-input" 
+                rows="5" 
+                placeholder=" " 
+                required
+              ></textarea>
+              <label for="message" class="form-label">Your Message</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loader"></span>
+            </button>
+          </form>
+          
+          <div id="formStatus" class="form-status"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Abinshah P M. Built with passion and JavaScript.</p>
+        <div class="footer-links">
+          <a href="https://github.com/Abinshah7777" target="_blank">GitHub</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
