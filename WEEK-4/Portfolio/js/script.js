@@ -1,11 +1,6 @@
-/* ================================================
-   PORTFOLIO JAVASCRIPT - INTERACTIONS & ANIMATIONS
-   Created for Abinshah P M
-================================================ */
-
 // ========== INITIALIZE EMAILJS ==========
 (function() {
-  emailjs.init("service_7ooqqfj"); // Replace with your actual EmailJS public key
+  emailjs.init("bVnOK8nNnzAXCFOVF"); // Replace with your actual EmailJS public key
 })();
 
 // ========== MOBILE NAVIGATION TOGGLE ==========
@@ -151,8 +146,8 @@ contactForm.addEventListener('submit', async (e) => {
   try {
     // Send email using EmailJS
     const response = await emailjs.sendForm(
-      'YOUR_SERVICE_ID',      // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
+      'service_7ooqqfj',      // Replace with your EmailJS service ID
+      'template_lqe2pwp',     // Replace with your EmailJS template ID
       contactForm
     );
     
@@ -241,8 +236,7 @@ serviceCards.forEach(card => {
   serviceObserver.observe(card);
 });
 
-// ========== CURSOR GRADIENT EFFECT (OPTIONAL) ==========
-// Uncomment to enable custom cursor effect
+// ========== CURSOR GRADIENT EFFECT (OPTIONAL) ========== 
 
 document.addEventListener('mousemove', (e) => {
   const cursor = document.createElement('div');

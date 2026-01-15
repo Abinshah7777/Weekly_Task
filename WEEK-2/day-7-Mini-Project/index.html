@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 To-Do App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-card">
+            <!-- Header -->
+            <div class="header">
+                <h1>📝 To-Do App</h1>
+                <button class="dark-mode-btn" id="darkModeBtn">Dark Mode</button>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Enter task"
+                    autocomplete="off"
+                >
+                <button class="add-btn" id="addBtn">Add</button>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+            </div>
+
+            <!-- Task Counter -->
+            <div class="counter">
+                <span>Total Tasks: <strong id="totalTasks">0</strong> | Completed: <strong id="completedTasks">0</strong></span>
+            </div>
+
+            <!-- Task List -->
+            <ul class="task-list" id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
