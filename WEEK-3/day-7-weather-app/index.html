@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤 SkyLens — Weather App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌤 SkyLens</h1>
+      <p>Weather App</p>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading">
+      <svg class="loading-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+      </svg>
+      <p class="loading-text">Fetching weather...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="error-container hidden">
+      <div class="error-icon">❌</div>
+      <h2 class="error-title">SkyLens Error</h2>
+      <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- Weather Content -->
+    <div id="weather-content" class="hidden">
+      <div class="temperature-card">
+        <div id="temperature" class="temperature"></div>
+        <div id="condition" class="condition"></div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div class="info-content">
+            <div class="info-label">Location</div>
+            <div id="location" class="info-value"></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+            <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+            <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+          </svg>
+          <div class="info-content">
+            <div class="info-label">Wind Speed</div>
+            <div id="windspeed" class="info-value"></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+          </svg>
+          <div class="info-content">
+            <div class="info-label">Weather Code</div>
+            <div id="weathercode" class="info-value"></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <div class="info-content">
+            <div class="info-label">Last Updated</div>
+            <div id="time" class="info-value"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
